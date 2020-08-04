@@ -1,0 +1,18 @@
+extends ../layouts
+
+block content
+    form(action='/todo' method="POST" enctype="multipart/form-data")
+        .form-group
+            label(for="exampleInputEmail1") Nama
+            input.form-control(type="text"  name="nama")
+        .form-group
+            label(for="exampleInputEmail1") Description
+            input.form-control(type="text"  name="description")
+        .form-group
+            label(for="exampleInputEmail1") Status
+            input.form-control(type="text"  name="status")
+        .form-group
+            label(for="exampleInputEmail1") Photo
+            input.form-control(type="file"  name="photo")
+            //- input(type="hidden" value=id name="userId")
+        button.btn.btn-primary(type="submit") Add Photo

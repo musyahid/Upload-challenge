@@ -1,0 +1,6 @@
+extends ../layouts
+
+block content
+    h1= todo.nama
+    h5= todo.description
+    a(href='/todo/edit/'+ todo._id) EDIT

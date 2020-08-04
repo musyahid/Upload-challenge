@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  a.btn-primary(href='/todo') ADD TODO
+  
+   ul.list-group
+    each to_do, i in todo
+        li.list-group-item
+          a(href="/todo/todo_details/"+to_do._id)=to_do.nama
+          a.delete-todo(href="#", data-id=to_do._id) DELETE
+
+  
